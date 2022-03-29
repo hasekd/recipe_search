@@ -1,24 +1,16 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from "react";
+import DisplayRecipe from "./components/DisplayRecipe";
+import SearchRecipe from "./components/SearchRecipe";
 
 function App() {
+  const [recipe, setRecipe] = useState([]);
+
+  const addRecipeHandler = (recipeData) => setRecipe(recipeData);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <SearchRecipe onAddRecipe={addRecipeHandler} />
+      <DisplayRecipe recipe={recipe} />
+    </>
   );
 }
 

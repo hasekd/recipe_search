@@ -1,0 +1,21 @@
+.form {
+  display: flex;
+  justify-content: center;
+}
+
+.form input {
+  padding: 5px;
+}
+
+.form button {
+  padding: 5px;
+  background-color: #e4d1b9;
+  border: 1px solid white;
+  border-radius: 5px;
+  margin-left: 5px;
+  cursor: pointer;
+}
+
+.form button:hover {
+  opacity: 0.8;
+}
